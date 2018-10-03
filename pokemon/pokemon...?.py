@@ -1,7 +1,10 @@
 import random
+
 li = []
+
 x = 0
 y = 0
+
 file = open("data.txt", "r")
 content = file.read().split("\n")
 for row in range(0,8):
@@ -62,26 +65,26 @@ while True:
             x += 1
     elif n == 5:
         file = open("data.txt", "w")
-        text = ""
+        temp = ""
         for i in range(len(li)):
             for j in range(len(li[i])):
                 if i == y and j == x:
-                    text += "1"
+                    temp += "1"
                 elif li[i][j] == "o":
-                    text += "0"
+                    temp += "0"
                 elif li[i][j] == "#":
-                    text += "2"
+                    temp += "2"
 
                 if j < len(li[i]) - 1:
-                    text += ","
-            text += "\n"
+                    temp += ","
+            temp += "\n"
 
         if li[y][x] == "#":
-            text += "2"
+            temp += "2"
         else:
-            text += "0"
+            temp += "0"
 
-        file.write(text)
+        file.write(temp)
         file.close()
         break
 
