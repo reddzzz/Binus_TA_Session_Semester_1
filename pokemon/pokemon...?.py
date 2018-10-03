@@ -45,9 +45,6 @@ print('''
 4) Move right
 5) Save & End Game
  ''')
-#playerY = row
-#PlayerX = col
-
 
 while True:
     n = int(input("Please choose a number from 1 to 5: "))
